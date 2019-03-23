@@ -24,7 +24,7 @@ def main():
     mnist_train = mnist_train.map(convert_types).shuffle(10000).batch(32)
     mnist_test = mnist_test.map(convert_types).batch(32)
 
-    if args.trainer == 'eager':
+    if args.trainer.lower() == 'eager':
         trainer = EagerTrainer()
     else:
         trainer = KerasTrainer()
@@ -33,6 +33,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
-

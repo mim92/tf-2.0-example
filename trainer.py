@@ -5,6 +5,7 @@ from tensorflow.keras import Model
 import time
 from tqdm import tqdm
 
+
 class MyModel(Model):
     def __init__(self):
         super(MyModel, self).__init__()
